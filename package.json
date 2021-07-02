@@ -1,0 +1,49 @@
+{
+  "name": "chili-api-speed-tester",
+  "version": "0.0.1",
+  "description": "",
+  "bin": "./dist/main.js",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "tsc && node ./dist/main.js -c build/config-speed.json",
+    "build": "tsc && pkg package.json --options no-warnings --compress GZip"
+  },
+  "keywords": [],
+  "author": "seancrowe",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "chiliconnector": "^1.0.3",
+    "chrome-launcher": "^0.14.0",
+    "chrome-remote-interface": "^0.31.0",
+    "cli-progress": "^3.9.0",
+    "commander": "^7.2.0",
+    "durations": "^3.4.2",
+    "fs-extra": "^10.0.0",
+    "json-stringify-safe": "^5.0.1",
+    "json2csv": "^5.0.6",
+    "no-try": "^3.1.0",
+    "pkg": "^5.2.1",
+    "puppeteer-core": "^10.1.0",
+    "runtypes": "^6.3.1",
+    "typescript": "^4.3.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.9.1",
+    "@types/json-stringify-safe": "^5.0.0",
+    "@types/chrome-remote-interface": "^0.31.1",
+    "@types/fs-extra": "^9.0.11",
+    "@types/json2csv": "^5.0.2",
+    "@types/node": "^15.6.2",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0"
+  },
+  "pkg": {
+    "targets": ["node14-windows-x64", "node14-macos-x64"],
+    "outputPath": "./build"
+  }
+}
